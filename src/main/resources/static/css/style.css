@@ -1,0 +1,234 @@
+* {
+    margin: 0;
+    padding: 0;
+    background: #ccc;
+}
+
+
+
+#header {
+    padding-top: 15px;
+    width: 100%;
+    height: 70px;
+    margin-bottom: 25px;
+    float: left;
+}
+
+#main {
+    height: 1200px;
+    width: 80vw;
+    background: white;
+    border-radius: 50px;
+    padding: 0%;
+    margin-left: 10%;
+    float: left;
+    text-align: center;
+    line-height: 100vh;
+    position: relative;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8);
+}
+
+.mainText {
+    width: 80%;
+    height: 50px;
+    background: white;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 15px;
+    margin-bottom: 50px;
+    line-height: 50px;
+}
+
+.branch {
+    margin: 0px;
+    padding: 0%;
+    border-radius: 10px;
+    width: 6px;
+    height: 700px;
+    background-color: black;
+    position: absolute;
+    right: 15%;
+    top: 180px;
+
+}
+
+.branchturn {
+    position: absolute;
+    width: 200px;
+    height: 150px;
+    border: solid 6px;
+    border-color: black white white black;
+    background-color: white;
+    border-radius: 30px 0px 0px 0px;
+}
+
+#firstbr {
+    left: 33%;
+    top: 50px;
+}
+
+
+
+.circle {
+    border: black solid 6px;
+    background-color: green;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    position: absolute;
+}
+
+.circle:hover {
+    scale: 1.1;
+    background-color: red;
+}
+
+#commit0 {
+    right: 12.38%;
+    top: 121px;
+}
+
+#commit1 {
+    right: 12.38%;
+    top: 321px;
+    z-index: 1;
+}
+
+.boxModel {
+    height: 150px;
+    width: 30%;
+    background: rgb(195, 195, 195);
+    border: 5px black solid;
+    border-radius: 10px;
+    margin: 0px;
+    padding: 0px;
+    line-height: 150px;
+    position: absolute;
+}
+
+/* #first {
+} */
+
+#second {
+    left: 3%;
+    top: 340px;
+}
+
+div img {
+    display: block;
+    position: absolute;
+    height: auto;
+    width: 50px;
+}
+
+#git {
+    right: 80px;
+    margin-right: 10px;
+}
+
+#tel {
+    right: 20px;
+}
+
+#git:hover,
+#tel:hover {
+    scale: 1.2;
+}
+
+#footer {
+    width: 100%;
+    height: 330px;
+    background: #ccc;
+    color: white;
+    margin-top: 50px;
+    padding-top: 3%;
+    float: left;
+    line-height: 70px;
+    display: flex;
+    justify-content: space-around;
+}
+
+#information {
+    width: 40%;
+    height: 90%;
+    background-color: rgb(255, 255, 255);
+    margin-right: 50px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8);
+}
+
+#feedback {
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8);
+    margin-left: 50px;
+    width: 50%;
+    height: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 0%;
+}
+
+.input {
+    width: 203px;
+    height: 25px;
+    margin-top: 40px;
+    margin-left: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #333;
+    background-color: #f9f9f9;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1); /* Добавляем мягкую тень */
+    transition: border-color 0.3s ease; /* Плавное изменение цвета границы при фокусе */
+}
+
+#message {
+    margin-top: 0px;
+    width: 70%;
+    height: 80px;
+}
+
+#qs {
+    width: 70%;
+    height: 20%;
+    margin-top: 10px;
+}
+
+#buttonFeedBack {
+    width: 20%;
+    height: 15%;
+    background-color: black;
+    margin-left: 28px;
+    margin-top: 0px;
+    color: white;
+    position: relative;
+    left: -13px;
+}
+
+#buttonFeedBack:active {
+    scale: 0.95;
+}
+
+.input:focus {
+    border-color: #66afe9; /* Изменяем цвет границы при фокусе */
+    outline: none; /* Убираем стандартное подчеркивание при фокусе */
+}
+
+.input-error {
+    border: 2px solid red;
+}
+
+#textForm {
+    background: white;
+    color: black;
+    font-size: 20px;
+    padding: 0px;
+    margin: 0px;
+    position: absolute;
+    height: 22px;
+    line-height: 22px;
+    top: 1406px;
+    left: 73px;
+}
