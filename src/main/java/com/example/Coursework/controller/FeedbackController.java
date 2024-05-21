@@ -3,6 +3,7 @@ package com.example.Coursework.controller;
 import com.example.Coursework.dto.FeedbackDto;
 import com.example.Coursework.entity.FeedbackEntity;
 import com.example.Coursework.repository.FeedbackRepository;
+import com.example.Coursework.service.AddbService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -14,22 +15,16 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/api")
 public class FeedbackController {
 
+
     @Autowired
-    private FeedbackRepository feedbackRepository;
+    private AddbService addbService;
 
     @PostMapping("/feedback")
     public ResponseEntity<String> receiveFeedback(@RequestBody FeedbackDto feedbackDto) {
-        if (feedbackDto.getName() == null || feedbackDto.getEmail() == null || feedbackDto.getMessage() == null) {
-            return ResponseEntity.badRequest().body("Missing required fields");
+        if (addbService.addBd(feedbackDto)) {
+            return ResponseEntity.ok("Feedback received successfully");
+        } else {
+            return ResponseEntity.badRequest().body("Error");
         }
-
-        FeedbackEntity feedback = new FeedbackEntity();
-        feedback.setName(feedbackDto.getName());
-        feedback.setEmail(feedbackDto.getEmail());
-        feedback.setMessage(feedbackDto.getMessage());
-
-        feedbackRepository.save(feedback);
-
-        return ResponseEntity.ok("Feedback received successfully");
     }
 }
