@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,20 +10,26 @@
 <div id="header">
     <div>
         <a href="https://web.telegram.org/a/">
-            <img src="/static/img/telegramIcon.png" alt="" id="tel">
+            <img src="/static/img/telegramIcon.png" alt="Telegram" id="tel">
         </a>
     </div>
     <div>
         <a href="https://github.com/Roms1de">
-            <img src="/static/img/githubIcon.png" alt="" id="git">
+            <img src="/static/img/githubIcon.png" alt="GitHub" id="git">
         </a>
     </div>
 </div>
 <div id="main">
     <div class="mainText">Добро пожаловать на мой сайт-портфолио, который демонстрирует мои hard-skills и немного рассказывает о том кто я</div>
-    <div class="branchturn" id="firstbr"></div>
-    <div class="circle" id="commit0"></div>
-    <div class="circle" id="commit1"></div>
+    <div class="circle" id="commit0" data-text="Первый коммит">
+        <div class="tooltip"><span>Здесь будет одна из технологий используемых в проекте</span></div>
+    </div>
+    <div class="circle" id="commit1" data-text="Второй коммит">
+        <div class="tooltip">Второй коммит</div>
+    </div>
+    <div class="circle" id="commit2" data-text="Третий коммит">
+        <div class="tooltip">Третий коммит</div>
+    </div>
     <div class="branch"></div>
     <div class="boxModel" id="first">Какой то текст</div>
     <div class="boxModel" id="second">И тут какой то текст</div>
@@ -37,9 +43,7 @@
         <div id="textForm">Форма обратной связи</div>
     </form>
 
-    <div id="information">
-
-    </div>
+    <div id="information"></div>
 </div>
 <script src="/static/js/scripts.js"></script>
 </body>
