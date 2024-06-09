@@ -9,12 +9,12 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 @Service
-public class AddbService {
+public class AddDBService {
 
     @Autowired
     private FeedbackRepository feedbackRepository;
 
-    public Boolean addBd(FeedbackDto feedbackDto) {
+    public Boolean addDB(FeedbackDto feedbackDto) {
         if (feedbackDto.getName() == null || feedbackDto.getEmail() == null || feedbackDto.getMessage() == null) {
             return ResponseEntity.badRequest().body("Missing required fields").hasBody();
         }
@@ -28,7 +28,7 @@ public class AddbService {
         return true;
     }
 
-    public AddbService() {
+    public AddDBService() {
 
     }
 
