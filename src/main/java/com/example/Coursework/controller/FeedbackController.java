@@ -1,9 +1,7 @@
 package com.example.Coursework.controller;
 
 import com.example.Coursework.dto.FeedbackDto;
-import com.example.Coursework.entity.FeedbackEntity;
-import com.example.Coursework.repository.FeedbackRepository;
-import com.example.Coursework.service.AddbService;
+import com.example.Coursework.service.AddDBService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -15,13 +13,13 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/api")
 public class FeedbackController {
 
-
     @Autowired
-    private AddbService addbService;
+    private AddDBService addDBService;
+
 
     @PostMapping("/feedback")
     public ResponseEntity<String> receiveFeedback(@RequestBody FeedbackDto feedbackDto) {
-        if (addbService.addBd(feedbackDto)) {
+        if (addDBService.addDB(feedbackDto)) {
             return ResponseEntity.ok("Feedback received successfully");
         } else {
             return ResponseEntity.badRequest().body("Error");
