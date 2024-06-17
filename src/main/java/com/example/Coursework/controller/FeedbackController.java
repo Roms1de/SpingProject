@@ -29,8 +29,20 @@ public class FeedbackController {
             try {
                 // Формируем тело письма с информацией от пользователя
                 String subject = "New Feedback Received";
-                String body = "Name: " + feedbackDto.getName() + "\nEmail: " + feedbackDto.getEmail() + "\nMessage: " + feedbackDto.getMessage();
-                emailSenderService.sendEmail("your_email@example.com", subject, body);
+                String body = String.format(
+                        "Dear Admin,\n\n" +
+                                "You have received a new feedback message from your website.\n\n" +
+                                "Details of the feedback are as follows:\n\n" +
+                                "Name: %s\n" +
+                                "Email: %s\n" +
+                                "Message:\n%s\n\n" +
+                                "Best Regards,\n" +
+                                "Your Website Team",
+                        feedbackDto.getName(),
+                        feedbackDto.getEmail(),
+                        feedbackDto.getMessage()
+                );
+                emailSenderService.sendEmail("romantsy21@gmail.com", subject, body);
 
                 return ResponseEntity.ok("Feedback received successfully");
             } catch (Exception e) {
