@@ -1,6 +1,8 @@
 package com.example.Coursework.controller;
 
 import com.example.Coursework.dto.FeedbackDto;
+import com.example.Coursework.entity.FeedbackEntity;
+import com.example.Coursework.repository.FeedbackRepository;
 import com.example.Coursework.service.AddDBService;
 import com.example.Coursework.service.EmailSenderService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,12 +12,17 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.Optional;
+
 @RestController
 @RequestMapping("/api")
 public class FeedbackController {
 
     @Autowired
     private AddDBService addDBService;
+
+    @Autowired
+    private FeedbackRepository feedbackRepository;
 
     @Autowired
     private EmailSenderService emailSenderService;
