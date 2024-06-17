@@ -15,6 +15,7 @@ public class FeedbackEntity {
     private String name;
     private String email;
     private String message;
+    private int clickCount;
 
     public Long getId() {
         return id;
@@ -46,5 +47,13 @@ public class FeedbackEntity {
 
     public void setMessage(String message) {
         this.message = message;
+    }
+
+    public int getClickCount() {
+        return clickCount;
+    }
+
+    public void setClickCount(int clickCount) {
+        this.clickCount = clickCount;
     }
 }
