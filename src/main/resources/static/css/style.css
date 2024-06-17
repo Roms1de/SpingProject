@@ -1,7 +1,7 @@
 * {
     margin: 0;
     padding: 0;
-    background: #ccc;
+    background: #1F7B67;
 }
 
 
@@ -17,7 +17,7 @@
 #main {
     height: 1200px;
     width: 80vw;
-    background: white;
+    background: #006B53;
     border-radius: 50px;
     padding: 0%;
     margin-left: 10%;
@@ -30,14 +30,12 @@
 
 .mainText {
     width: 80%;
-    height: 50px;
-    background: white;
-    margin-left: 10%;
-    margin-right: 10%;
-    margin-top: 15px;
-    margin-bottom: 50px;
+    height: auto;
+    background: #006B53;
+    color: white;
+    margin: 15px 10% 10px;
     line-height: 50px;
-    font-size: 25px;
+    font-size: 48px;
 }
 
 .branch {
@@ -133,7 +131,7 @@ div img {
 #footer {
     width: 100%;
     height: 330px;
-    background: #ccc;
+    background: #1F7B67;
     color: white;
     margin-top: 50px;
     padding-top: 3%;
@@ -146,14 +144,14 @@ div img {
 #information {
     width: 40%;
     height: 90%;
-    background-color: rgb(255, 255, 255);
+    background-color: #006B53;
     margin-right: 50px;
     border-radius: 5px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8);
 }
 
 #feedback {
-    background-color: rgb(255, 255, 255);
+    background-color: #006B53;
     border-radius: 5px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8);
     margin-left: 50px;
@@ -216,8 +214,8 @@ div img {
 }
 
 #textForm {
-    background: white;
-    color: black;
+    background: #006B53;
+    color: white;
     font-size: 20px;
     padding: 0px;
     margin: 0px;
@@ -258,4 +256,24 @@ div span {
 .circle:hover .tooltip {
     visibility: visible;
     opacity: 1;
+}
+
+#bodyText {
+    background: #006B53;
+    color: white;
+    border-radius: 5px;
+    width: 75%;
+    height: auto; /* Изменил с 50% на auto, чтобы высота подстраивалась под текст */
+    margin-left: 5%;
+    padding: 20px; /* Добавил отступы внутри блока */
+    box-sizing: border-box; /* Учитывает padding и border в общей ширине и высоте */
+    font-family: Arial, sans-serif; /* Задал шрифт для текста */
+    font-size: 18px; /* Задал размер шрифта */
+    line-height: 1.5; /* Увеличил межстрочный интервал для лучшей читаемости */
+    text-align: justify; /* Выровнял текст по ширине */
+}
+
+#bodyText p {
+    background: #006B53;
+    margin-bottom: 16px; /* Добавил отступ снизу для каждого абзаца */
 }
