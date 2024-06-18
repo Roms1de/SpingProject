@@ -1,6 +1,5 @@
 package com.example.Coursework.entity;
 
-
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -12,10 +11,11 @@ public class FeedbackEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
     private String name;
     private String email;
     private String message;
-    private int clickCount;
+
 
     public Long getId() {
         return id;
@@ -47,13 +47,5 @@ public class FeedbackEntity {
 
     public void setMessage(String message) {
         this.message = message;
-    }
-
-    public int getClickCount() {
-        return clickCount;
-    }
-
-    public void setClickCount(int clickCount) {
-        this.clickCount = clickCount;
     }
 }
