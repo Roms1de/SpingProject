@@ -56,3 +56,24 @@ document.getElementById("buttonFeedBack").addEventListener("click", function(eve
         console.log("Есть ошибки в форме");
     }
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("visible");
+                observer.unobserve(entry.target); // Остановить наблюдение за элементом
+            }
+        });
+    }, {
+        threshold: 0.1,
+        rootMargin: '-300px 0px' // Поднимет область наблюдения на 50px сверху
+    });
+
+    // Находим все элементы, которые нужно отслеживать
+    const elementsToObserve = document.querySelectorAll('.circle, .branch');
+    elementsToObserve.forEach(element => {
+        element.classList.add("hidden"); // Добавляем класс скрытности
+        observer.observe(element); // Начинаем наблюдение
+    });
+});
